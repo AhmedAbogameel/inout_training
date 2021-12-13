@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inout_training/models/character.dart';
 import 'package:inout_training/views/home/controller.dart';
 import 'package:inout_training/widgets/character_card.dart';
 
@@ -10,7 +11,7 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
 
   HomeController controller = HomeController();
-  List<dynamic> characters = [];
+  List<Character> characters = [];
   bool isLoading = true;
 
   @override
@@ -34,8 +35,8 @@ class _HomeViewState extends State<HomeView> {
         itemCount: characters.length,
         itemBuilder: (context, index) {
           return CharacterCard(
-            image: characters[index]['img'],
-            name: characters[index]['name'],
+            image: characters[index].image!,
+            name: characters[index].name!,
           );
         },
       ),
