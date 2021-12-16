@@ -10,12 +10,6 @@ class SignUpController {
   late String password;
   final formKey = GlobalKey<FormState>();
 
-  /*
-  null -> null;
-  ok -> navigate;
-  String -> Dialog , Snack;
-   */
-
   Future<String?> signUp() async {
     if(!formKey.currentState!.validate()) return null;
     formKey.currentState!.save();
@@ -32,8 +26,6 @@ class SignUpController {
       } else {
         return response.data['error']['message'];
       }
-      print(response.statusCode);
-      print(response.data);
     } on DioError catch (e){
       return e.message;
     } catch(e){
