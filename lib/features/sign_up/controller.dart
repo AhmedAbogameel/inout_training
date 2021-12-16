@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:inout_training/core/app_storage/app_storage.dart';
 import 'package:inout_training/core/dio_helper/dio_helper.dart';
 
 class SignUpController {
@@ -26,6 +27,7 @@ class SignUpController {
     try{
       final response = await DioHelper.post('signUp', data: body);
       if(response.statusCode == 200){
+        await AppStorage.cacheUserData(email: email, apiToken: response.data['idToken'], uid: response.data['localId']);
         return 'ok';
       } else {
         return response.data['error']['message'];
