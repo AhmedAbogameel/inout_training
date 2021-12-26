@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inout_training/core/app_storage/app_storage.dart';
+import 'package:inout_training/core/router/router.dart';
 import 'package:inout_training/features/home/view.dart';
 import 'package:inout_training/features/sign_up/view.dart';
 
@@ -13,6 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: navigatorKey,
+      onGenerateRoute: onGenerateRoute,
       home: AppStorage.isLogged ? HomeView() : SignUpView(),
     );
   }
