@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 
 class DioHelper {
 
-  static const String _API_KEY = 'AIzaSyCMEFcYYsswdlK5hVOmn_PsPjw1cDjN9Vc';
+  static const String _API_KEY = '';
   static const String _BASE_URL = 'https://identitytoolkit.googleapis.com/v1/accounts:';
 
   static Dio _dio = Dio()..options.validateStatus = (v) => v! < 500;
