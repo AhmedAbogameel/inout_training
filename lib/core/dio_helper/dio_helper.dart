@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 
 class DioHelper {
 
-  static const String _API_KEY = 'be2acbcfe99b5fe0e4e59c3b35c3dd23';
+  static const String _API_KEY = 'e48bfbc78ac07fa4af892619b231f0b2';
   static const String _BASE_URL = 'http://api.openweathermap.org/data/2.5/weather?';
 
   static Dio _dio = Dio()..options.baseUrl = _BASE_URL..options.validateStatus = (v) => v! < 500;
