@@ -35,6 +35,7 @@ class _Dialog extends StatelessWidget {
               child: Text('Open Setting'),
               onPressed: () async {
                 await Geolocator.openAppSettings();
+                MagicRouter.pop();
               },
             ),
             ElevatedButton(
