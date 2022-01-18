@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:inout_training/core/router/router.dart';
 import 'package:inout_training/features/home/cubit.dart';
+import 'package:inout_training/features/search/view.dart';
 import 'package:inout_training/widgets/loading_indicator.dart';
 
 class HomeView extends StatelessWidget {
@@ -9,7 +11,11 @@ class HomeView extends StatelessWidget {
     return BlocProvider(
       create: (context) => HomeCubit()..getCurrentWeather(),
       child: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          actions: [
+            IconButton(onPressed: () => MagicRouter.navigateTo(SearchView()), icon: Icon(Icons.search),),
+          ],
+        ),
         body: SizedBox(
           width: double.infinity,
           child: BlocBuilder<HomeCubit, HomeStates>(
