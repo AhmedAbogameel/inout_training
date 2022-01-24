@@ -1,0 +1,15 @@
+{
+  "login": {
+    "email": "البريد الالكتروني",
+    "password": "الرقم السري"
+  },
+  "home": {
+    "title": "الرئيسي"
+  },
+  "setting": {
+    "change_language": "تغيير اللغه"
+  },
+  "profile": {
+    "title": "الملف الشخصي"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "login": {
+    "email": "Email",
+    "password": "Password"
+  },
+  "home": {
+    "title": "Home"
+  },
+  "setting": {
+    "change_language": "Change Language"
+  },
+  "profile": {
+    "title": "Profile"
+  }
+}
